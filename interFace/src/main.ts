@@ -35,3 +35,38 @@ const user1: User = {
   age: 25,
   isMeried: false,
 };
+
+// void
+
+function voidFunc(text: string): void {
+  console.log(text);
+}
+// voidFunc("salom");
+
+function callVoid(name: string, callback: (salom: string) => void) {
+  callback("hello " + name);
+}
+
+const name = callVoid("Bekzod", (salom) => {
+  console.log(salom);
+});
+
+console.log(name);
+
+// optional
+interface Calc {
+  a: number;
+  b: number;
+  c: number;
+}
+
+function calc(data: Calc) {
+  return data.a + data.b / data.c;
+}
+console.log(
+  calc({
+    a: 1,
+    b: 2,
+    c: 1,
+  })
+);
